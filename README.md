@@ -1,18 +1,10 @@
-# SwiftUI Views Tests
+# SamplePoc
 
 This project is to try View and Test With mock datas .
 
 There are some ContentViews to test UI . 
 
-## There are Contents :
-
-1. ShortcutsContentView
-2. BrenoContentView
-3. HorizontalElementToPrintContentView
-4. SampleGridView
-5. AnimationMovingView
-6. AnimationFadeInOutView
-
+## SwiftUI
 
 ### ShortcutsContentView
 
@@ -38,3 +30,18 @@ Translation animation or Move animation when tap on button inside one card and b
 ### AnimationFadeInOutView
 
 Fade in and out animation when tap on button inside one card and button disappear in it and appear to another card. 
+
+
+## UIKIT
+
+### StackAnimation on CollectionView
+
+### Expandable on TableView
+
+### HTML 
+
+Inside the WKWebKit and TextView 
+
+### UITableViewDiffableDataSource
+
+### Custom Tabbar
