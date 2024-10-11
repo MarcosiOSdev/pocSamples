@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3940C9AD2C17561100558F4F /* HorizontalElementsToPrintContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3940C9AC2C17561100558F4F /* HorizontalElementsToPrintContentView.swift */; };
 		3940C9AF2C17A5BC00558F4F /* SampleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3940C9AE2C17A5BC00558F4F /* SampleGridView.swift */; };
-		3940C9B12C17A8B500558F4F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3940C9B02C17A8B500558F4F /* README.md */; };
 		396CD90F2C13B2F600983322 /* ShortcutsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396CD90E2C13B2F600983322 /* ShortcutsContentView.swift */; };
 		396CD9112C13B4D000983322 /* BrenoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396CD9102C13B4D000983322 /* BrenoView.swift */; };
 		396CD9132C13BB9600983322 /* BrenoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396CD9122C13BB9600983322 /* BrenoContentView.swift */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		3940C9AC2C17561100558F4F /* HorizontalElementsToPrintContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalElementsToPrintContentView.swift; sourceTree = "<group>"; };
 		3940C9AE2C17A5BC00558F4F /* SampleGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGridView.swift; sourceTree = "<group>"; };
-		3940C9B02C17A8B500558F4F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		396CD90E2C13B2F600983322 /* ShortcutsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsContentView.swift; sourceTree = "<group>"; };
 		396CD9102C13B4D000983322 /* BrenoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrenoView.swift; sourceTree = "<group>"; };
 		396CD9122C13BB9600983322 /* BrenoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrenoContentView.swift; sourceTree = "<group>"; };
@@ -53,7 +51,6 @@
 		3972D36D2BF83F7800C82CB4 = {
 			isa = PBXGroup;
 			children = (
-				3940C9B02C17A8B500558F4F /* README.md */,
 				3972D3782BF83F7800C82CB4 /* swiftui-views-tests */,
 				3972D3772BF83F7800C82CB4 /* Products */,
 			);
@@ -152,7 +149,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3940C9B12C17A8B500558F4F /* README.md in Resources */,
 				3972D3812BF83F7900C82CB4 /* Preview Assets.xcassets in Resources */,
 				3972D37E2BF83F7900C82CB4 /* Assets.xcassets in Resources */,
 			);
