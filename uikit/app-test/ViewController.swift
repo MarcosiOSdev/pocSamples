@@ -167,8 +167,8 @@ class MyTabBar: UITabBarController, UITabBarControllerDelegate {
         let stackList = StackCardsViewController()
         
         setViewControllers([
-            createNavController(for: customVCOne, title: "One", image: UIImage(systemName: "house")),
             createNavController(for: stackList, title: "Stack", image: UIImage(systemName: "person")),
+            createNavController(for: customVCOne, title: "One", image: UIImage(systemName: "house")),
             createNavController(for: tableDataSourceDiff, title: "Diff", image: nil),
             createNavController(for: expandableList, title: "Expandable", image: UIImage(systemName: "ellipsis.rectangle"))
         ], animated: true)

@@ -114,7 +114,8 @@ class StackFlowLayout: UICollectionViewFlowLayout {
     // Configurações de layout
     private let standardHeight: CGFloat = 200 // Altura padrão do card
     private let stackedHeight: CGFloat = 50   // Altura quando empilhado
-    private let maximumVisibleItems = 3       // Número máximo de items empilhados
+    private let maximumVisibleItems = 5       // Número máximo de items empilhados
+    private let alphaIncrease: CGFloat = 0.0 // Alpha que vai aumentando a cada stack.
     
     private var yPositionAllowScroll: CGFloat = 0 {
         didSet {
@@ -158,7 +159,9 @@ class StackFlowLayout: UICollectionViewFlowLayout {
                 
                 
                 // 7. Calcula a escala para cada card (0.85, 0.90, 0.95, etc.)
-                let scale = CGFloat(0.95 + (0.05 * stackPosition))
+                // Defina o valor máximo para a escala, para não passar da Edge do iPhone
+                let maxScale: CGFloat = 1.05
+                let scale = min(0.95 + (0.05 * stackPosition), maxScale)
                 
                 // Get y value of collectionView in superview.
                 let collectionViewPositionInSuperview = collectionView.convert(collectionView.bounds.origin, to: collectionView.superview!)
@@ -170,18 +173,23 @@ class StackFlowLayout: UICollectionViewFlowLayout {
                 let yPosition = contentOffset + (stackedHeight * stackPosition) + yPositionCollectionView
                 
                 // 9. Aplica as transformações
-                attribute.frame.origin.y = yPosition           // Nova posição
-                attribute.transform = CGAffineTransform(scaleX: scale, y: scale) // Nova escala
-                attribute.zIndex = 1000 + indexPath.item      // Ordem de empilhamento
-                attribute.alpha = 1.0 - (0.2 * stackPosition) // Transparência
+                UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseIn], animations: {
+                    attribute.frame.origin.y = yPosition           // Nova posição
+                    attribute.transform = CGAffineTransform(scaleX: scale, y: scale) // Nova escala
+                    attribute.zIndex = 1000 + indexPath.item      // Ordem de empilhamento
+                    attribute.alpha = 1.0 - (self.alphaIncrease * stackPosition) // Transparência
+                }, completion: nil)
                 
                 // add last height to scroll
                 yPositionAllowScroll = yPosition + (attribute.frame.size.height / 2)
             } else {
                 // 10. Se o item estiver na área visível normal
-                attribute.transform = .identity // Remove transformações
-                attribute.alpha = 1.0          // Totalmente visível
-                attribute.zIndex = 0           // Z-index normal
+                UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseIn], animations: {
+                    attribute.transform = .identity // Remove transformações
+                    attribute.alpha = 1.0          // Totalmente visível
+                    attribute.zIndex = 0           // Z-index normal ( passando por traz )
+                    attribute.zIndex = 2000 + indexPath.item  // Z-index normal (passando o card pela frente)
+                }, completion: nil)
                 
                 yPositionAllowScroll -= (attribute.frame.size.height / 2)
             }
