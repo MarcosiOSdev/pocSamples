@@ -10,6 +10,14 @@ There are some ContentViews to test UI .
 
 Shortcut has done all on SwiftUI
 
+### NavBar Custom to SwiftUI
+
+There is a navigationBar custom to SwiftUI with size and constraint to edge fake. 
+Have to change size and space edges always change iOS or iPhone versions.
+
+### VisualEffect to iOS 17 
+
+Checkout visualEffect on VStack and HStack , with grow and change color in currentIndex. 
 
 ### BrenoContentView
 

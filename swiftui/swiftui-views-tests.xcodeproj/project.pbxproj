@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390DB1932CC5A61400839591 /* TextWithPriorities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390DB1922CC5A61400839591 /* TextWithPriorities.swift */; };
+		390DB1952CC5A74C00839591 /* VisualEffectHorizontalExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390DB1942CC5A74C00839591 /* VisualEffectHorizontalExample.swift */; };
+		390DB1972CC5AA4700839591 /* NavigationBarFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390DB1962CC5AA4700839591 /* NavigationBarFake.swift */; };
 		3940C9AD2C17561100558F4F /* HorizontalElementsToPrintContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3940C9AC2C17561100558F4F /* HorizontalElementsToPrintContentView.swift */; };
 		3940C9AF2C17A5BC00558F4F /* SampleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3940C9AE2C17A5BC00558F4F /* SampleGridView.swift */; };
 		396CD90F2C13B2F600983322 /* ShortcutsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396CD90E2C13B2F600983322 /* ShortcutsContentView.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		390DB1922CC5A61400839591 /* TextWithPriorities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithPriorities.swift; sourceTree = "<group>"; };
+		390DB1942CC5A74C00839591 /* VisualEffectHorizontalExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectHorizontalExample.swift; sourceTree = "<group>"; };
+		390DB1962CC5AA4700839591 /* NavigationBarFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarFake.swift; sourceTree = "<group>"; };
 		3940C9AC2C17561100558F4F /* HorizontalElementsToPrintContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalElementsToPrintContentView.swift; sourceTree = "<group>"; };
 		3940C9AE2C17A5BC00558F4F /* SampleGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGridView.swift; sourceTree = "<group>"; };
 		396CD90E2C13B2F600983322 /* ShortcutsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 			children = (
 				3972D3792BF83F7800C82CB4 /* swiftui_views_testsApp.swift */,
 				3972D37B2BF83F7800C82CB4 /* ContentView.swift */,
+				390DB1942CC5A74C00839591 /* VisualEffectHorizontalExample.swift */,
 				3972D37D2BF83F7900C82CB4 /* Assets.xcassets */,
 				3972D37F2BF83F7900C82CB4 /* Preview Content */,
 				396CD90E2C13B2F600983322 /* ShortcutsContentView.swift */,
@@ -79,6 +86,8 @@
 				39B0944D2C24714B0071D29A /* MultiWidgetContentView.swift */,
 				39B26E2F2CA6F90200A0206D /* AnimationMovingView.swift */,
 				39B26E312CA6FA4400A0206D /* AnimationFadeInOutView.swift */,
+				390DB1922CC5A61400839591 /* TextWithPriorities.swift */,
+				390DB1962CC5AA4700839591 /* NavigationBarFake.swift */,
 			);
 			path = "swiftui-views-tests";
 			sourceTree = "<group>";
@@ -163,12 +172,15 @@
 			files = (
 				3972D37C2BF83F7800C82CB4 /* ContentView.swift in Sources */,
 				3972D37A2BF83F7800C82CB4 /* swiftui_views_testsApp.swift in Sources */,
+				390DB1932CC5A61400839591 /* TextWithPriorities.swift in Sources */,
 				3940C9AD2C17561100558F4F /* HorizontalElementsToPrintContentView.swift in Sources */,
 				396CD9132C13BB9600983322 /* BrenoContentView.swift in Sources */,
+				390DB1952CC5A74C00839591 /* VisualEffectHorizontalExample.swift in Sources */,
 				39B0944E2C24714B0071D29A /* MultiWidgetContentView.swift in Sources */,
 				3940C9AF2C17A5BC00558F4F /* SampleGridView.swift in Sources */,
 				396CD90F2C13B2F600983322 /* ShortcutsContentView.swift in Sources */,
 				39B26E322CA6FA4400A0206D /* AnimationFadeInOutView.swift in Sources */,
+				390DB1972CC5AA4700839591 /* NavigationBarFake.swift in Sources */,
 				39B26E302CA6F90200A0206D /* AnimationMovingView.swift in Sources */,
 				396CD9112C13B4D000983322 /* BrenoView.swift in Sources */,
 			);

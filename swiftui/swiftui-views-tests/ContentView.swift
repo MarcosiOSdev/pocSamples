@@ -18,17 +18,24 @@ struct ContentView: View {
         
         TabView {
             
+            VisualEffectHorizontalExample()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("H Visual Effect")
+                }
+            
+            UsageNavBarFakeView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("NavBar SwiftUI Custom")
+                }
+            
             TextWithPriorities()
                 .tabItem {
                 Image(systemName: "house.fill")
                 Text("Priority")
             }
-            
-            BrenoContentView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Breno Test")
-                }
+           
             
             ShortcutsContentView()
                 .tabItem {
@@ -59,6 +66,12 @@ struct ContentView: View {
                     Image(systemName: "house.fill")
                     Text("Animation FadeIn and Out")
                 }
+            
+            BrenoContentView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Breno Test")
+                }
         }
 //        .accentColor(.green)  Set the color of the selected tab item
         .onAppear { setupTabBarAppearance() }
@@ -85,47 +98,5 @@ extension ContentView {
         
         // Set unselected item color
         UITabBar.appearance().unselectedItemTintColor = UIColor.blue
-    }
-}
-
-#Preview {
-    TextWithPriorities()
-}
-
-
-struct TextWithPriorities: View {
-    var body: some View {
-        VStack {
-            HStack {
-                Text("Texto muito longo que precisa ser truncado")
-                    .frame(width: 100) // Define uma largura fixa de 100
-                    .lineLimit(1) // Limita a uma linha
-                    .truncationMode(.tail) // Trunca no final (mostra "...")
-                
-                Text("Outro texto")
-            }
-
-            Divider()
-            
-            HStack {
-                Text("Texto longo que deve respeitar o espaço")
-                    .frame(width: 100) // Define uma largura fixa de 100
-                    .layoutPriority(1) // Dá maior prioridade ao layout deste texto
-                
-                Text("Outro texto")
-                    .layoutPriority(0) // Prioridade menor para esse texto
-            }
-
-            Divider()
-            HStack {
-                Text("Texto longo que não deve expandir")
-                    .frame(width: 100) // Limita a largura
-                    .fixedSize(horizontal: true, vertical: false) // Impede o redimensionamento horizontal do texto
-                
-                Text("Outro texto")
-            }
-
-            
-        }
     }
 }
