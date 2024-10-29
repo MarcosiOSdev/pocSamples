@@ -10,6 +10,8 @@
 		390DB1932CC5A61400839591 /* TextWithPriorities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390DB1922CC5A61400839591 /* TextWithPriorities.swift */; };
 		390DB1952CC5A74C00839591 /* VisualEffectHorizontalExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390DB1942CC5A74C00839591 /* VisualEffectHorizontalExample.swift */; };
 		390DB1972CC5AA4700839591 /* NavigationBarFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390DB1962CC5AA4700839591 /* NavigationBarFake.swift */; };
+		391DC4262CCEBFDF007BA9B5 /* PrintViewTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391DC4252CCEBFDF007BA9B5 /* PrintViewTrackView.swift */; };
+		391DC4292CCEC43D007BA9B5 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391DC4282CCEC43D007BA9B5 /* ItemView.swift */; };
 		3940C9AD2C17561100558F4F /* HorizontalElementsToPrintContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3940C9AC2C17561100558F4F /* HorizontalElementsToPrintContentView.swift */; };
 		3940C9AF2C17A5BC00558F4F /* SampleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3940C9AE2C17A5BC00558F4F /* SampleGridView.swift */; };
 		396CD90F2C13B2F600983322 /* ShortcutsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396CD90E2C13B2F600983322 /* ShortcutsContentView.swift */; };
@@ -19,6 +21,9 @@
 		3972D37C2BF83F7800C82CB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972D37B2BF83F7800C82CB4 /* ContentView.swift */; };
 		3972D37E2BF83F7900C82CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3972D37D2BF83F7900C82CB4 /* Assets.xcassets */; };
 		3972D3812BF83F7900C82CB4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3972D3802BF83F7900C82CB4 /* Preview Assets.xcassets */; };
+		398324FB2CD0693E001F6A86 /* VisibleItemPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398324FA2CD0693E001F6A86 /* VisibleItemPreferenceKey.swift */; };
+		398324FD2CD06997001F6A86 /* PrintViewTrackV2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398324FC2CD06997001F6A86 /* PrintViewTrackV2View.swift */; };
+		398324FF2CD06A33001F6A86 /* VisibleItemsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398324FE2CD06A33001F6A86 /* VisibleItemsModifier.swift */; };
 		39B0944E2C24714B0071D29A /* MultiWidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B0944D2C24714B0071D29A /* MultiWidgetContentView.swift */; };
 		39B26E302CA6F90200A0206D /* AnimationMovingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B26E2F2CA6F90200A0206D /* AnimationMovingView.swift */; };
 		39B26E322CA6FA4400A0206D /* AnimationFadeInOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B26E312CA6FA4400A0206D /* AnimationFadeInOutView.swift */; };
@@ -28,6 +33,8 @@
 		390DB1922CC5A61400839591 /* TextWithPriorities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithPriorities.swift; sourceTree = "<group>"; };
 		390DB1942CC5A74C00839591 /* VisualEffectHorizontalExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectHorizontalExample.swift; sourceTree = "<group>"; };
 		390DB1962CC5AA4700839591 /* NavigationBarFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarFake.swift; sourceTree = "<group>"; };
+		391DC4252CCEBFDF007BA9B5 /* PrintViewTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintViewTrackView.swift; sourceTree = "<group>"; };
+		391DC4282CCEC43D007BA9B5 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		3940C9AC2C17561100558F4F /* HorizontalElementsToPrintContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalElementsToPrintContentView.swift; sourceTree = "<group>"; };
 		3940C9AE2C17A5BC00558F4F /* SampleGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGridView.swift; sourceTree = "<group>"; };
 		396CD90E2C13B2F600983322 /* ShortcutsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutsContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +45,9 @@
 		3972D37B2BF83F7800C82CB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3972D37D2BF83F7900C82CB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3972D3802BF83F7900C82CB4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		398324FA2CD0693E001F6A86 /* VisibleItemPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleItemPreferenceKey.swift; sourceTree = "<group>"; };
+		398324FC2CD06997001F6A86 /* PrintViewTrackV2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintViewTrackV2View.swift; sourceTree = "<group>"; };
+		398324FE2CD06A33001F6A86 /* VisibleItemsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleItemsModifier.swift; sourceTree = "<group>"; };
 		39B0944D2C24714B0071D29A /* MultiWidgetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiWidgetContentView.swift; sourceTree = "<group>"; };
 		39B26E2F2CA6F90200A0206D /* AnimationMovingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationMovingView.swift; sourceTree = "<group>"; };
 		39B26E312CA6FA4400A0206D /* AnimationFadeInOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationFadeInOutView.swift; sourceTree = "<group>"; };
@@ -54,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		391DC4272CCEC429007BA9B5 /* PrintViewTracker */ = {
+			isa = PBXGroup;
+			children = (
+				391DC4252CCEBFDF007BA9B5 /* PrintViewTrackView.swift */,
+				391DC4282CCEC43D007BA9B5 /* ItemView.swift */,
+			);
+			path = PrintViewTracker;
+			sourceTree = "<group>";
+		};
 		3972D36D2BF83F7800C82CB4 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +92,7 @@
 		3972D3782BF83F7800C82CB4 /* swiftui-views-tests */ = {
 			isa = PBXGroup;
 			children = (
+				398324F92CD06922001F6A86 /* PrintViewTrackerv2 */,
 				3972D3792BF83F7800C82CB4 /* swiftui_views_testsApp.swift */,
 				3972D37B2BF83F7800C82CB4 /* ContentView.swift */,
 				390DB1942CC5A74C00839591 /* VisualEffectHorizontalExample.swift */,
@@ -88,6 +108,7 @@
 				39B26E312CA6FA4400A0206D /* AnimationFadeInOutView.swift */,
 				390DB1922CC5A61400839591 /* TextWithPriorities.swift */,
 				390DB1962CC5AA4700839591 /* NavigationBarFake.swift */,
+				391DC4272CCEC429007BA9B5 /* PrintViewTracker */,
 			);
 			path = "swiftui-views-tests";
 			sourceTree = "<group>";
@@ -98,6 +119,16 @@
 				3972D3802BF83F7900C82CB4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		398324F92CD06922001F6A86 /* PrintViewTrackerv2 */ = {
+			isa = PBXGroup;
+			children = (
+				398324FA2CD0693E001F6A86 /* VisibleItemPreferenceKey.swift */,
+				398324FC2CD06997001F6A86 /* PrintViewTrackV2View.swift */,
+				398324FE2CD06A33001F6A86 /* VisibleItemsModifier.swift */,
+			);
+			path = PrintViewTrackerv2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +210,14 @@
 				39B0944E2C24714B0071D29A /* MultiWidgetContentView.swift in Sources */,
 				3940C9AF2C17A5BC00558F4F /* SampleGridView.swift in Sources */,
 				396CD90F2C13B2F600983322 /* ShortcutsContentView.swift in Sources */,
+				391DC4262CCEBFDF007BA9B5 /* PrintViewTrackView.swift in Sources */,
 				39B26E322CA6FA4400A0206D /* AnimationFadeInOutView.swift in Sources */,
 				390DB1972CC5AA4700839591 /* NavigationBarFake.swift in Sources */,
 				39B26E302CA6F90200A0206D /* AnimationMovingView.swift in Sources */,
+				391DC4292CCEC43D007BA9B5 /* ItemView.swift in Sources */,
+				398324FF2CD06A33001F6A86 /* VisibleItemsModifier.swift in Sources */,
+				398324FD2CD06997001F6A86 /* PrintViewTrackV2View.swift in Sources */,
+				398324FB2CD0693E001F6A86 /* VisibleItemPreferenceKey.swift in Sources */,
 				396CD9112C13B4D000983322 /* BrenoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

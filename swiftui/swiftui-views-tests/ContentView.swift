@@ -18,6 +18,12 @@ struct ContentView: View {
         
         TabView {
             
+            PrintViewTrackView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("PrintView")
+                }
+            
             VisualEffectHorizontalExample()
                 .tabItem {
                     Image(systemName: "house.fill")
