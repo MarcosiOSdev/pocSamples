@@ -14,22 +14,26 @@ struct PrintViewTrackView: View {
     @State private var visibleItems: Set<String> = []
     
     var body: some View {
-        VStack {
-            VListVisibleItemsTracking(items: items, visibleItems: $visibleItems) { item in
-                ItemView(item: item)
-            }
-            
-            // View para mostrar os itens visíveis (debug)
+        NavigationStack {
             VStack {
-                Text("Itens visíveis: \(visibleItems.count)")
-                Text(visibleItems.sorted().joined(separator: ", "))
+                VListVisibleItemsTracking(items: items, visibleItems: $visibleItems) { item in
+                    
+                    if let idInt = Int(item.id), idInt % 2 == 0 {
+                        HorizontalCardView()
+                    } else {                        
+                        ItemView(item: item)
+                    }
+                }
+                
+                // View para mostrar os itens visíveis (debug)
+                VStack {
+                    Text("Itens visíveis: \(visibleItems.count)")
+                    Text(visibleItems.sorted().joined(separator: ", "))
+                }
+                .padding()
+                .background(Color.gray.opacity(0.2))
             }
-            .padding()
-            .background(Color.gray.opacity(0.2))
-        }
-        .onChange(of: visibleItems) { newItems in
-            print("Itens visíveis atualizados:", newItems)
-            // Aqui você pode executar qualquer lógica quando os itens visíveis mudarem
+            .navigationTitle("Print View")
         }
     }
 }
@@ -55,34 +59,26 @@ struct VListVisibleItemsTracking<Data: RandomAccessCollection, Content: View>: V
         self.content = content
     }
     
-    @State var size: CGRect = .zero
     var body: some View {
-        ScrollView {
-            LazyVStack(spacing: 0) {
-                ForEach(items) { item in
-                    content(item)
-                        .modifier(VListVisibilityTracker(id: item.id, sizeParent: size))
+        GeometryReader(content: { proxyVStack in
+            ScrollView {
+                LazyVStack(spacing: 0) {
+                    ForEach(items) { item in
+                        content(item)
+                            .modifier(VListVisibilityTracker(id: item.id, sizeParent: proxyVStack.frame(in: .global)))
+                    }
                 }
             }
-        }
-        .background(
-            GeometryReader(content: { proxyVStack in
-                Color.clear.onAppear {
-                    size = proxyVStack.frame(in: .global)
-                }
-            })
-        )
-        .onPreferenceChange(VisibleItemsPreferenceKey.self) { value in
-            visibleItems = value
-        }
+            .onPreferenceChange(VisibleItemsPreferenceKey.self) { value in
+                visibleItems = value
+            }
+        })
     }
 }
 // View modifier to tracker visibility of view
 struct VListVisibilityTracker: ViewModifier {
     let id: String
     let sizeParent: CGRect
-    @State private var reader: GeometryProxy?
-    @State private var isVisible: Bool = false
     
     func body(content: Content) -> some View {
         content
@@ -93,10 +89,6 @@ struct VListVisibilityTracker: ViewModifier {
                             key: VisibleItemsPreferenceKey.self,
                             value: isItemVisible(geometry) ? [id] : []
                         )
-                        .onAppear { reader = geometry }
-                        .onChange(of: geometry.frame(in: .global)) { _ in
-                            updateVisibility(geometry)
-                        }
                 }
             )
     }
@@ -108,12 +100,6 @@ struct VListVisibilityTracker: ViewModifier {
         print("Sizes: id=\(id), item da lista=\(frame.size), item.minY=\(frame.minY), item.maxY=\(frame.maxY), parent.minY \(sizeParent.minY), parent.maxY=\(sizeParent.maxY), maxFrame=\(maxFrame)")
         
         return maxFrame <= sizeParent.maxY && frame.minY >= sizeParent.minY
-    }
-    private func updateVisibility(_ geometry: GeometryProxy) {
-        let newIsVisible = isItemVisible(geometry)
-        if isVisible != newIsVisible {
-            isVisible = newIsVisible
-        }
     }
 }
 

@@ -23,16 +23,21 @@ struct ItemView: View {
         return 150 + increaseValue
     }
     
+    var background: Color {
+        let listColor = [Color.blue, Color.red, Color.green, Color.gray]
+        let idInt = Int(item.id)!
+        let index = getIndex(id: idInt)
+        return listColor[index]
+    }
+    
+    func getIndex(id: Int) -> Int {
+        return id > 3 ? getIndex(id: id - 4) : id
+    }
+    
     var body: some View {
-        VStack {
-            Text("Row is \(item.id) - \(item.title)")
-                .frame(height: heightSize)
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-            
-            Divider()
-                .foregroundStyle(.white)
-                .padding()
-        }
+        Text("Row is \(item.id) - \(item.title)")
+            .frame(height: heightSize)
+            .frame(maxWidth: .infinity)
+            .background(background)
     }
 }

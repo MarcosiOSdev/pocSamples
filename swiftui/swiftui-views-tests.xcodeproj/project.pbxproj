@@ -24,6 +24,7 @@
 		398324FB2CD0693E001F6A86 /* VisibleItemPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398324FA2CD0693E001F6A86 /* VisibleItemPreferenceKey.swift */; };
 		398324FD2CD06997001F6A86 /* PrintViewTrackV2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398324FC2CD06997001F6A86 /* PrintViewTrackV2View.swift */; };
 		398324FF2CD06A33001F6A86 /* VisibleItemsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398324FE2CD06A33001F6A86 /* VisibleItemsModifier.swift */; };
+		398325032CD08706001F6A86 /* HorizontalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398325022CD08706001F6A86 /* HorizontalCardView.swift */; };
 		39B0944E2C24714B0071D29A /* MultiWidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B0944D2C24714B0071D29A /* MultiWidgetContentView.swift */; };
 		39B26E302CA6F90200A0206D /* AnimationMovingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B26E2F2CA6F90200A0206D /* AnimationMovingView.swift */; };
 		39B26E322CA6FA4400A0206D /* AnimationFadeInOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B26E312CA6FA4400A0206D /* AnimationFadeInOutView.swift */; };
@@ -48,6 +49,7 @@
 		398324FA2CD0693E001F6A86 /* VisibleItemPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleItemPreferenceKey.swift; sourceTree = "<group>"; };
 		398324FC2CD06997001F6A86 /* PrintViewTrackV2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintViewTrackV2View.swift; sourceTree = "<group>"; };
 		398324FE2CD06A33001F6A86 /* VisibleItemsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisibleItemsModifier.swift; sourceTree = "<group>"; };
+		398325022CD08706001F6A86 /* HorizontalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCardView.swift; sourceTree = "<group>"; };
 		39B0944D2C24714B0071D29A /* MultiWidgetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiWidgetContentView.swift; sourceTree = "<group>"; };
 		39B26E2F2CA6F90200A0206D /* AnimationMovingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationMovingView.swift; sourceTree = "<group>"; };
 		39B26E312CA6FA4400A0206D /* AnimationFadeInOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationFadeInOutView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				391DC4252CCEBFDF007BA9B5 /* PrintViewTrackView.swift */,
 				391DC4282CCEC43D007BA9B5 /* ItemView.swift */,
+				398325022CD08706001F6A86 /* HorizontalCardView.swift */,
 			);
 			path = PrintViewTracker;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				391DC4262CCEBFDF007BA9B5 /* PrintViewTrackView.swift in Sources */,
 				39B26E322CA6FA4400A0206D /* AnimationFadeInOutView.swift in Sources */,
 				390DB1972CC5AA4700839591 /* NavigationBarFake.swift in Sources */,
+				398325032CD08706001F6A86 /* HorizontalCardView.swift in Sources */,
 				39B26E302CA6F90200A0206D /* AnimationMovingView.swift in Sources */,
 				391DC4292CCEC43D007BA9B5 /* ItemView.swift in Sources */,
 				398324FF2CD06A33001F6A86 /* VisibleItemsModifier.swift in Sources */,
