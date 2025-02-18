@@ -99,7 +99,10 @@ struct VListVisibilityTracker: ViewModifier {
         
         print("Sizes: id=\(id), item da lista=\(frame.size), item.minY=\(frame.minY), item.maxY=\(frame.maxY), parent.minY \(sizeParent.minY), parent.maxY=\(sizeParent.maxY), maxFrame=\(maxFrame)")
         
-        return maxFrame <= sizeParent.maxY && frame.minY >= sizeParent.minY
+        let isCompleteVisible = maxFrame <= sizeParent.maxY && frame.minY >= sizeParent.minY
+        let isPartiallyVisible = frame.maxY > sizeParent.minY && frame.minY < sizeParent.maxY
+        
+        return isPartiallyVisible
     }
 }
 

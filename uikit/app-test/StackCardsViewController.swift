@@ -52,7 +52,6 @@ class StackCardsViewController: UIViewController {
         collectionView.decelerationRate = .normal
         collectionView.isPrefetchingEnabled = true
         
-        collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.contentInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         collectionView.register(CardCell.self, forCellWithReuseIdentifier: cellIdentifier)
@@ -76,19 +75,6 @@ class StackCardsViewController: UIViewController {
 extension StackCardsViewController: StackFlowLayoutDelegate {
     func yPositionAllowScroll(y: CGFloat) {
         yPositionAllowScroll = y
-    }
-}
-
-extension StackCardsViewController: UIScrollViewDelegate, UICollectionViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // Defina o limite máximo para a rolagem Y
-//        let maxOffsetY: CGFloat = 0  // Defina o valor que você deseja como limite
-//
-//        // Verifique a posição atual do contentOffset Y
-//        if scrollView.contentOffset.y > maxOffsetY {
-//            // Limite a rolagem para não passar do limite
-//            scrollView.contentOffset.y = maxOffsetY
-//        }
     }
 }
 

@@ -165,8 +165,12 @@ class MyTabBar: UITabBarController, UITabBarControllerDelegate {
         let expandableList = ExpandableTableViewController(nibName: nil, bundle: nil)
         
         let stackList = StackCardsViewController()
+        let meliMas = MeliMasViewController()
+        let presentVC = PresentsViewController()
         
         setViewControllers([
+            createNavController(for: presentVC, title: "Meli+", image: UIImage(systemName: "person")),
+            createNavController(for: meliMas, title: "Meli+", image: UIImage(systemName: "person")),
             createNavController(for: stackList, title: "Stack", image: UIImage(systemName: "person")),
             createNavController(for: customVCOne, title: "One", image: UIImage(systemName: "house")),
             createNavController(for: tableDataSourceDiff, title: "Diff", image: nil),

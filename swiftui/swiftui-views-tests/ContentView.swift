@@ -12,11 +12,40 @@ struct ContentView: View {
     
     init() {
         setupTabBarAppearance()
+        
+        let textWithEmojis = "Olá, mundo! 🌎😊👋"
+        let textWithoutEmojis = removeEmojis(from: textWithEmojis)
+        print(textWithoutEmojis)  // Output: "Olá, mundo! "
     }
     
     var body: some View {
         
         TabView {
+            
+            StackAnimationByAndriu()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Stack Andriu")
+                }
+            
+            ScrollViewOffsetView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Offset Scroll")
+                }
+            
+            StackCardsView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Stack Animation")
+                }
+            
+            
+            ScrollableTrackerView()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Scroll")
+                }
             
             PrintViewTrackView()
                 .tabItem {
@@ -104,5 +133,12 @@ extension ContentView {
         
         // Set unselected item color
         UITabBar.appearance().unselectedItemTintColor = UIColor.blue
+    }
+    
+    func removeEmojis(from text: String) -> String {
+        return text.unicodeScalars.filter { scalar in
+            // Exclui escalas Unicode que representam emojis
+            !(scalar.properties.isEmojiPresentation || scalar.properties.isEmoji)
+        }.map(String.init).joined()
     }
 }
