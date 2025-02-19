@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StackAnimationByAndriu: View {
+struct StackCardview: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
             .fill(.blue.gradient)
@@ -18,18 +18,13 @@ struct StackAnimationByAndriu: View {
     
 }
 
-struct CardViewX: View {
-    var body: some View {
-        Text("HOLA")
-    }
-}
 
-struct HomeView: View {
+struct StackAnimationByAndriu: View {
     var body: some View {
         ScrollView {
             LazyVStack(spacing: -15) {
                 ForEach(0..<4) { index in
-                    CardViewX()
+                    StackCardview()
                         .visualEffect { content, geometryProxy in
                             content
                                 .hueRotation(Angle(degrees: geometryProxy.frame(in: .global).origin.y / 10))
